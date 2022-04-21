@@ -36,10 +36,7 @@ function shuffleDeck() {
     }
 }
 
-function startGame() {
-    hidden = deck.pop();
-    dealerSum += getValue(hidden);
-    
+function dealerTurn(){
     while (dealerSum < 17) {
         //<img src="./img/cards/4-C.png">
         let cardImg = document.createElement("img");
@@ -49,6 +46,19 @@ function startGame() {
         dealerAceCount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
     }
+}
+
+function startGame() {
+    hidden = deck.pop();
+    dealerSum += getValue(hidden);
+        
+    let cardImg = document.createElement("img");
+    let card = deck.pop();
+    cardImg.src = "./img/cards/" + card + ".png";
+    dealerSum += getValue(card);
+    dealerAceCount += checkAce(card);
+    document.getElementById("dealer-cards").append(cardImg);
+    
 
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
@@ -82,9 +92,13 @@ function hit() {
         canHit = false;
     }
 
+    checkPlayersNumber();
+
 }
 
 function stay() {
+    dealerTurn();
+
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
 
@@ -140,4 +154,11 @@ function reduceAce(playerSum, playerAceCount) {
         playerAceCount -= 1;
     }
     return playerSum;
+}
+
+function checkPlayersNumber(){
+    let playerTotal=yourSum-(10*yourAceCount);
+    if(playerTotal>21){
+        stay();
+    }
 }
