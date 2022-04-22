@@ -1,0 +1,42 @@
+body {
+    background: radial-gradient(#38833c, #1e421f);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+  }
+
+#bottom_scoreboard{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7em;
+}
+
+#bottom_scoreboard button{
+    float: right;
+    margin: 0 0.5em;
+    width: 15%;
+    height: 4em;
+}
+
+#playing_cards{
+    position: absolute;
+    bottom: 10em;
+    margin-left: 2em;
+    width: 97%;
+    height: 22em;
+}
+
+.card{
+    width: 15em;
+    height: 21.78em;
+    margin: 1em 1em;
+}
+#div_line{
+    height: 0.05em;
+    background-color: grey;
+    width: 95%;
+    display: inline-block;
+}
