@@ -79,7 +79,58 @@ function getImageSRC(cardName){
     return "./../img/cards/"+cardName+".png"
 }
 
+function changeHold1Value(){
+    if(document.getElementById("hold1").className==="holded"){
+        document.getElementById("hold1").className="hold"
+        document.getElementById("hold1").innerHTML="HOLD"
+    }else{
+        document.getElementById("hold1").className="holded"
+        document.getElementById("hold1").innerHTML="HELD"
+    }
+}
+function changeHold2Value(){
+    if(document.getElementById("hold2").className==="holded"){
+        document.getElementById("hold2").className="hold"
+        document.getElementById("hold2").innerHTML="HOLD"
+    }else{
+        document.getElementById("hold2").className="holded"
+        document.getElementById("hold2").innerHTML="HELD"
+    }
+}
+function changeHold3Value(){
+    if(document.getElementById("hold3").className==="holded"){
+        document.getElementById("hold3").className="hold"
+        document.getElementById("hold3").innerHTML="HOLD"
+    }else{
+        document.getElementById("hold3").className="holded"
+        document.getElementById("hold3").innerHTML="HELD"
+    }
+}
+function changeHold4Value(){
+    if(document.getElementById("hold4").className==="holded"){
+        document.getElementById("hold4").className="hold"
+        document.getElementById("hold4").innerHTML="HOLD"
+    }else{
+        document.getElementById("hold4").className="holded"
+        document.getElementById("hold4").innerHTML="HELD"
+    }
+}
+function changeHold5Value(){
+    if(document.getElementById("hold5").className==="holded"){
+        document.getElementById("hold5").className="hold"
+        document.getElementById("hold5").innerHTML="HOLD"
+    }else{
+        document.getElementById("hold5").className="holded"
+        document.getElementById("hold5").innerHTML="HELD"
+    }
+}
+
 window.onload = function() {
-    console.log("AQUI DEBERIAMOS ESTAR")
     document.getElementById("dealButton").addEventListener("click",updateCardImages)
+    
+    document.getElementById("hold1").addEventListener("click",changeHold1Value)
+    document.getElementById("hold2").addEventListener("click",changeHold2Value)
+    document.getElementById("hold3").addEventListener("click",changeHold3Value)
+    document.getElementById("hold4").addEventListener("click",changeHold4Value)
+    document.getElementById("hold5").addEventListener("click",changeHold5Value)
   };

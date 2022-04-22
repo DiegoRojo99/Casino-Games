@@ -30,13 +30,35 @@ body {
 }
 
 .card{
+    position: relative;
     width: 15em;
     height: 21.78em;
     margin: 1em 1em;
 }
+.hold{
+    position: absolute;
+    top: 24em;
+    left: 4em;
+    width: 12em;
+    height: 5em;
+}
+.holded{
+    background-color: lightblue;
+    color: yellow;
+    position: absolute;
+    top: 24em;
+    left: 4em;
+    width: 12em;
+    height: 5em;
+}
+
 #div_line{
     height: 0.05em;
     background-color: grey;
     width: 95%;
     display: inline-block;
+}
+.video_card_container{
+    display: inline-block;
+    position: relative;
 }
